@@ -5,13 +5,14 @@ const path = require('path');
 require("dotenv").config();
 
 // Load environment variables
-const TOKEN = "7061792920:AAH0isOht02oYJs6iAZNWQfK85Je9U8zB24";
-const PRIVATE_CHANNEL_ID = "-1002186561007";
-const PUBLIC_CHANNEL_USERNAME = "@PremLeechub";
+const TOKEN = process.env.TOKEN;
+const PRIVATE_CHANNEL_ID = process.env.PRIVATE_CHANNEL_ID;
+const PUBLIC_CHANNEL_USERNAME = process.env.PUBLIC_CHANNEL_USERNAME;
+const DEBRID_API_KEY = process.env.DEBRID_API_KEY;
+const FAKIR_PIN = process.env.FAKIR_PIN;
 const DEBRID_API_URL = "https://debrid-link.com/api/v2";
-const DEBRID_API_KEY =
-    "0UElitoHO7DuJQ2m8boBGRkpZ9qslbYCP61tXy6YUGPSzdrDUhSwfcYyn92Kv1Rh";
-const FAKIR_PIN = "RpDKbcZiNrHWSXgCqSJp";
+
+
 
 // Create a bot instance
 const bot = new TelegramBot(TOKEN, { polling: true });
