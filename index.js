@@ -1,3 +1,12 @@
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Your route handlers and other app logic here
+
+
+
+
 const TelegramBot = require("node-telegram-bot-api");
 const axios = require("axios");
 const fs = require('fs');
@@ -635,3 +644,7 @@ bot.onText(/\/start/, async (msg) => {
         });
 
         log("Bot is running...");
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
